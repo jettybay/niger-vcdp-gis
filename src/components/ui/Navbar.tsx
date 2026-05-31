@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Navbar() {
   return (
@@ -11,7 +10,6 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-3 group">
             <div className="relative h-24 w-24 transition-transform group-hover:scale-105">
-              {/* Update src with your actual logo filename in /public/images/ */}
               <Image
                 src="/images/coatofarm.png"
                 alt="Coat of Arms"
@@ -20,13 +18,45 @@ export default function Navbar() {
                 priority
               />
             </div>
-            <div className="flex flex-col border-l border-gray-200 pl-3">
+            <div className="flex flex-col border-l border-gray-200 pl-4">
               <span className="text-sm font-extrabold tracking-tight text-gray-900 sm:text-base leading-none">
                 NIGER VCDP
               </span>
               <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-green-600 mt-1">
                 GIS Portal
               </span>
+            </div>
+              {/* Niger State Logo */}
+               <div className="relative h-24 w-24 transition-transform group-hover:scale-105">
+              <Image
+                src="/images/NigerState.png"
+                alt="Niger State"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+
+          {/* ifadv */}
+             <div className="relative h-24 w-24 transition-transform group-hover:scale-105">
+              <Image
+                src="/images/ifadv.png"
+                alt="ifadv"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+
+            {/* ifad */}
+               <div className="relative h-24 w-24 transition-transform group-hover:scale-105">
+              <Image
+                src="/images/ifad.png"
+                alt="ifad"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
           </div>
         </div>
