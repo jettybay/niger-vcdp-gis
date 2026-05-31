@@ -4,12 +4,12 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-      <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white">
+      <div className="container mx-auto flex min-h-[5rem] items-center justify-center px-4 py-2 sm:px-6 lg:px-8">
         {/* Logo and Brand Section */}
-        <div className="flex items-center gap-4">
-          <div className="flex items-center gap-3 group">
-            <div className="relative h-24 w-24 transition-transform group-hover:scale-105">
+        <div className="flex items-center justify-center">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 group">
+            <div className="relative h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 transition-transform group-hover:scale-105">
               <Image
                 src="/images/coatofarm.png"
                 alt="Coat of Arms"
@@ -26,8 +26,8 @@ export default function Navbar() {
                 GIS Portal
               </span>
             </div>
-              {/* Niger State Logo */}
-               <div className="relative h-24 w-24 transition-transform group-hover:scale-105">
+            {/* Niger State Logo */}
+            <div className="relative h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 transition-transform group-hover:scale-105">
               <Image
                 src="/images/NigerState.png"
                 alt="Niger State"
@@ -38,7 +38,7 @@ export default function Navbar() {
             </div>
 
           {/* ifadv */}
-             <div className="relative h-24 w-24 transition-transform group-hover:scale-105">
+            <div className="relative h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 transition-transform group-hover:scale-105">
               <Image
                 src="/images/ifadv.png"
                 alt="ifadv"
@@ -49,7 +49,7 @@ export default function Navbar() {
             </div>
 
             {/* ifad */}
-               <div className="relative h-24 w-24 transition-transform group-hover:scale-105">
+            <div className="relative h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 transition-transform group-hover:scale-105">
               <Image
                 src="/images/ifad.png"
                 alt="ifad"
