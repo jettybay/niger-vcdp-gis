@@ -46,18 +46,26 @@ export default function NigeriaStatesMap() {
               fillOpacity: 0.8,
             };
           }}
-          onEachFeature={(feature: any, layer: any) => {
-            const state =
-              feature?.properties?.shapeName;
+         onEachFeature={(feature: any, layer: any) => {
+  const state =
+    feature?.properties?.shapeName || "Unknown";
 
-            if (state === "Niger") {
-              layer.on({
-                click: () => {
-                  router.push("/niger-state");
-                },
-              });
-            }
-          }}
+  if (state === "Niger") {
+  layer.bindTooltip("Niger State", {
+    permanent: true,
+    direction: "center",
+    className: "state-label",
+  });
+}
+
+  if (state === "Niger") {
+    layer.on({
+      click: () => {
+        router.push("/niger-state");
+      },
+    });
+  }
+}}
         />
       )}
     </MapContainer>
