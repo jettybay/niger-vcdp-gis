@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { GeoJSON, MapContainer, TileLayer } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
 
 export default function NigeriaBoundaryMap() {
   const [geoData, setGeoData] = useState<any>(null);
@@ -22,6 +23,7 @@ export default function NigeriaBoundaryMap() {
       }}
     >
       <TileLayer
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
 
